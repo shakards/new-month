@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Happy New Month</h1>
+        </div>
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Month</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow-text">Happy New Month</h1>
+        <p class="subtext">Wishing you a month filled with joy and success!</p>
+    </div>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Month</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glow-text">Happy New Month</h1>
+        <p class="subtext">Wishing you a month filled with joy and success!</p>
+    </div>
+</body>
+<script>
+    function checkTime() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
+    if (hours === 8 && minutes === 52) {
+        document.getElementById('messageContainer').style.display = 'flex';
+    }
+}
+
+setInterval(checkTime, 60000);
+
+checkTime();
+
+</script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Month</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="messageContainer" style="display: none;">
+        <h1 class="glow-text">Happy New Month</h1>
+        <!-- <p class="subtext">Wishing you a month filled with joy and success!</p> -->
+    </div>
+
+    <script>
+        function checkTime() {
+            // Get the current time in Nigerian Time Zone (UTC+1)
+            const now = new Date();
+            const currentHours = now.getUTCHours() + 1; // Nigeria is UTC+1
+            const currentMinutes = now.getMinutes();
+
+            // Check if the time is 09:00 AM in Nigerian time
+            if (currentHours === 12 && currentMinutes === 00) {
+                // Display the message by setting the container's display to 'block'
+                document.getElementById('messageContainer').style.display = 'flex';
+            }
+        }
+
+        // Run the check every minute
+        setInterval(checkTime, 60000);
+
+        // Run an initial check in case it's already 09:00 AM when the page loads
+        checkTime();
+    </script>
+</body>
+</html>
